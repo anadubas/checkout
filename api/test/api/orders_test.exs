@@ -64,4 +64,20 @@ defmodule Api.OrdersTest do
       assert "-7 Should be a positive  number" = Orders.get_order_value(-7)
     end
   end
+
+  describe "verify_card/1" do
+    test "updates order successufully" do
+      order = insert(:order, card_number: "1234123412341235")
+
+      assert {:ok, updated_order} = Orders.verify_card(order)
+      assert updated_order.payment_accepted == true
+    end
+
+    test "updates order when error" do
+      order = insert(:order, card_number: "1234123412341234")
+
+      assert {:ok, updated_order} = Orders.verify_card(order)
+      assert updated_order.payment_accepted == false
+    end
+  end
 end

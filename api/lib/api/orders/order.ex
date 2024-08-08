@@ -12,11 +12,11 @@ defmodule Api.Orders.Order do
     field :bags, :integer, default: 1
     field :value, Money.Ecto.Amount.Type
     field :card_number, :string
-    field :check_payment, :boolean
+    field :payment_accepted, :boolean
   end
 
   @required_fields ~w(customer_name customer_email card_number)a
-  @fields ~w(bags value check_payment)a
+  @fields ~w(bags value payment_accepted)a
 
   @doc """
 
@@ -31,6 +31,6 @@ defmodule Api.Orders.Order do
   end
 
   def value do
-    5.90
+    5_90
   end
 end
