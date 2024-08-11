@@ -3,9 +3,12 @@ defmodule ApiWeb.Router do
 
   pipeline :api do
     plug :accepts, ["json"]
+    plug Casex.CamelCaseDecoderPlug
   end
 
   scope "/api", ApiWeb do
     pipe_through :api
+
+    post "/orders", OrderController, :create
   end
 end

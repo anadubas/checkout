@@ -8,7 +8,11 @@ defmodule Api.Repo.Migrations.AddOrder do
       add :bags, :integer, null: false, default: 1
       add :value, :integer
       add :card_number, :string, null: false
-      add :payment_accepted, :boolean
+      add :payment_confirmed, :boolean
+      add :payment_accepted_at, :naive_datetime
+      add :payment_rejected_at, :naive_datetime
+
+      timestamps()
     end
   end
 end

@@ -10,7 +10,9 @@ defmodule Api.Factory do
       customer_email: sequence(:email, &"mail#{&1}@email#{&1}.com"),
       bags: 6,
       value: Orders.get_order_value(6),
-      card_number: "1234123412341234"
+      card_number: "1234123412341234",
+      inserted_at: NaiveDateTime.utc_now(),
+      updated_at: NaiveDateTime.utc_now()
     }
   end
 end

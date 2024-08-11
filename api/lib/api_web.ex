@@ -21,7 +21,7 @@ defmodule ApiWeb do
 
   def router do
     quote do
-      use Phoenix.Router, helpers: false
+      use Phoenix.Router, helpers: true
 
       # Import common connection and controller functions to use in pipelines
       import Plug.Conn
@@ -45,6 +45,15 @@ defmodule ApiWeb do
       import ApiWeb.Gettext
 
       unquote(verified_routes())
+    end
+  end
+
+  def view do
+    quote do
+      use Phoenix.View, root: "lib/api_web/templates", namespace: ApiWeb
+
+      import Phoenix.Controller,
+        only: [get_flash: 1, get_flash: 2, view_module: 1, view_template: 1]
     end
   end
 

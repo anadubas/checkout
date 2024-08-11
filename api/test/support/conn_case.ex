@@ -23,6 +23,7 @@ defmodule ApiWeb.ConnCase do
       @endpoint ApiWeb.Endpoint
 
       use ApiWeb, :verified_routes
+      alias ApiWeb.Router.Helpers, as: Routes
 
       # Import conveniences for testing with connections
       import Plug.Conn
