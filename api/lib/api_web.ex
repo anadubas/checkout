@@ -32,6 +32,7 @@ defmodule ApiWeb do
   def channel do
     quote do
       use Phoenix.Channel
+      alias Api.Orders
     end
   end
 
@@ -43,6 +44,8 @@ defmodule ApiWeb do
 
       import Plug.Conn
       import ApiWeb.Gettext
+
+      alias Api.Orders
 
       unquote(verified_routes())
     end

@@ -1,8 +1,6 @@
 defmodule ApiWeb.OrderController do
   use ApiWeb, :controller
 
-  alias Api.Orders
-
   action_fallback ApiWeb.FallbackController
 
   def create(conn, %{"order" => params}) do
