@@ -45,7 +45,8 @@ defmodule Api.MixProject do
       {:bandit, "~> 1.5"},
       {:money, "~> 1.12"},
       {:ex_machina, "~> 2.8.0", only: :test},
-      {:casex, "~> 0.4.2"}
+      {:casex, "~> 0.4.2"},
+      {:cors_plug, "~> 3.0"}
     ]
   end
 
