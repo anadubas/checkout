@@ -12,14 +12,12 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "^5.0.1",
-    "web-vitals": "^2.1.4",
-    "nth-check": ">=2.0.1",
-    "postcss": ">=8.4.31"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
     "build": "NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
-    "test": "NODE_OPTIONS=--openssl-legacy-provider react-scripts test",
+    "test": "jest",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -39,5 +37,15 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.3",
+    "@babel/preset-react": "^7.24.7",
+    "@testing-library/jest-dom": "^6.4.8",
+    "@testing-library/react": "^16.0.0",
+    "babel-jest": "^29.7.0",
+    "jest": "^27.5.1",
+    "react-test-renderer": "^18.3.1"
   }
 }
