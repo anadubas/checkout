@@ -17,7 +17,7 @@ A React-based web application for managing orders with real-time updates using W
 - **Material-UI**: A React component library for styling.
 - **Axios**: A promise-based HTTP client for making API requests.
 - **WebSocket**: For real-time communication.
-- **Jest**: For unit testing (if applicable).
+- **Jest**: For unit testing.
 
 ## Getting Started
 
@@ -48,4 +48,4 @@ npm test
 
 ### To Do Note
 
-iImprove and create more tests
+Improve and create more tests
